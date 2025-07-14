@@ -1,0 +1,65 @@
+
+/* For WebKit browsers (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    transition: background 0.3s; /* Smooth transition */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of thumb on hover */
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin; /* Set width of the scrollbar (thin) */
+    scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
+}
+body{
+    font-size: 18px;
+}
+.carousel-box{
+    /*transform: translate3d(calc(var(--current-slide)*-1*var(--slide-width)));*/
+    transition: transform 0.5s ease;
+}
+
+.bg-gradient-0{
+    background: linear-gradient(180deg, #b0a9c0ff, #9828e0ff, #5c35e5ff, #6931e5ff);
+}
+.bg-gradient-90{
+    background: linear-gradient(90deg, #b0a9c0ff, #9828e0ff, #5c35e5ff, #6931e5ff);
+}
+
+.bg-gradient-180{
+    background: linear-gradient(180deg, #b0a9c0ff, #9828e0ff, #5c35e5ff, #6931e5ff);
+}
+
+.bg-gradient-270{
+    background: linear-gradient(270deg, #b0a9c0ff, #9828e0ff, #5c35e5ff, #6931e5ff);
+}
+
+.bg-gradient-45{
+    background: linear-gradient(45deg, #b0a9c0ff, #9828e0ff, #5c35e5ff, #6931e5ff);
+}
+
+.bg-gradient-135{
+    background: linear-gradient(135deg, #b0a9c0ff, #9828e0ff, #5c35e5ff, #6931e5ff);
+}
+
+.bg-gradient-225{
+    background: linear-gradient(225deg, #b0a9c0ff, #9828e0ff, #5c35e5ff, #6931e5ff);
+}
+
+.bg-gradient-315{
+    background: linear-gradient(315deg, #b0a9c0ff, #9828e0ff, #5c35e5ff, #6931e5ff);
+}
+
+.bg-gradient-radial{
+    background: radial-gradient(#b0a9c0ff, #9828e0ff, #5c35e5ff, #6931e5ff);;
+}
