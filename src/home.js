@@ -86,8 +86,8 @@ import { useState, useEffect } from "react";
               <Display param={info[1]}/>
               <Display param={info[2]}/>
             </div>
-            <button className="absolute bottom-[210] font-bold text-[40px]" onclick={prevSlide}>{'<'}</button>
-            <button className="absolute bottom-[210] left-[98%] font-bold text-[40px]" onclick={nextSlide}>{'>'}</button>
+            <button className="absolute bottom-[210] font-bold text-[40px]" onClick={prevSlide}>{'<'}</button>
+            <button className="absolute bottom-[210] left-[98%] font-bold text-[40px]" onClick={nextSlide}>{'>'}</button>
           </div>
            {/**Services */}
         <div className="bg-white w-full h-fit mt-1 py-4 sm:p-4">
