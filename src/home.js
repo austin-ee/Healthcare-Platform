@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
       //landing page
   export const Title=()=>{
       return(
-        <div className="fixed top-0 right-0 left-0 z-50 bg-indigo-500">
-          <div className="bg-inherit flex justify-between px-3 sm:h-[50px] py-3 pl-1 pr-4">
+        <div className="fixed top-0 right-0 left-0 z-50 h-[160px] bg- shadow bg-gray-200">
+          <div className="bg-indigo-500 flex justify-between px-3 sm:h-[50px] py-3 pl-1 pr-4">
             <span className="text-gray-300 font-bold text-[19px]"
                   style={{
                     fontFamily:'Segoe, san serif',
@@ -66,7 +66,7 @@ import { useState, useEffect } from "react";
       setCurrentSlide(prev=>((prev+1)%totalSlides))
      }
     return(
-      <div className="m-0 overflow-y-auto h-full mt-[160px]">
+      <div className="overflow-y-auto mt-[160px] flex-1">
           <div className="w-full h-[400px] bg-white bg-[url(./images/hospbgg.jpg)] flex-row place-content-center">
                <span className="block flex justify-center text-[24px] text-gray-600">
                  Your health is our priority, and we are dedicated to providing <span className="text-indigo-800 ml-1">exceptional medical care with compassion and expertise.</span>
