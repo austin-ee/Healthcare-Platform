@@ -11,6 +11,6 @@
       transform: rotateY(0deg);
     }
   }
-  body{
-    overflow: hidden;
+  html,body,#root{
+    height:100%
   }
