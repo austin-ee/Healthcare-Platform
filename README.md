@@ -33,3 +33,8 @@ git clone https://github.com/austin-ee/Healthcare-Platform.git
 cd Healthcare-Platform
 npm install
 npm run start
+
+
+ 🙋‍♂️ Author
+ . Austine Steve
+ GitHub:@austin-ee
