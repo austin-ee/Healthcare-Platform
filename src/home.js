@@ -109,8 +109,8 @@ import { useState, useEffect } from "react";
       {/**Patners */}
       <Partners/>
       {/**footer */}
-      <div className="w-full h-[350px] bg-[#191970] pb-4">
-         <div className="h-[130px] sm:32 flex  justify-between flex-wrap sm:pl-8 px-1 sm:px-5 py-2 text-white">
+      <div className="w-full h-[250px] bg-[#191970] pb-4">
+         <div className="h-[150px] sm:32 flex  justify-between flex-wrap sm:pl-8 px-1 sm:px-5 py-2 text-white">
            <section>
             <span className="text-gray-400 mb-2">Quick Links:</span>
             <span className="block text-[14px] cursor-default hover:text-[#02A7F0]">About us</span>
@@ -133,7 +133,7 @@ import { useState, useEffect } from "react";
             </div>
          </div>
          
-         <div className="border-t px-3 flex justify-between border-gray-500 text-white text-[13px] h-[40px]">
+         <div className="border-t px-3 flex justify-between border-gray-500 text-white text-[13px] h-[50px]">
             <p>Copyright &copy; 2025 Westhill.com. All rights reserved.</p> 
             <div className="p-2 w-20 flex justify-evenly">
             <svg fill="#FFFFFF" viewBox="0 0 256 256" id="Flat" className="h-8 w-8 flex p-1 justify-center hover:bg-[blue]" xmlns="http://www.w3.org/2000/svg">
