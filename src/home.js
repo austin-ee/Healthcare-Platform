@@ -34,7 +34,7 @@ import { useState, useEffect, useRef } from "react";
        </div>
     {/**End of top part */}
        <div className="h-[100px] flex bg-white sm:gap-8 border-b-2 border-gray-100 pl-4">
-         <img src="west logo.jpg" alt=" " className="w-[100px] h-[90px] rounded-full my-auto"/>
+         <img src="west logo.jpg" alt="logo" loading="lazy" className="w-[100px] h-[90px] rounded-full my-auto"/>
          <div className="flex gap-2 justify-center p-2 sm:gap-4 m-auto text-[16px] font-[arial]"> 
            <span className="text-[#1E98D7] cursor-default hover:text-[#81D3F8]">Home</span>
            <span className="text-[#1E98D7] cursor-default hover:text-[#81D3F8]">About us</span>
@@ -169,7 +169,7 @@ import { useState, useEffect, useRef } from "react";
   export const ServiceDisplayR =({param})=>{
     return(
       <div className="h-fit w-full py-[30px] my-3 px-[50px] flex bg-[#F5F5F5] justify-between rounded-[15px]">
-        <div className={`h-[300px] w-[350px] bg-indigo-100 ml-4 mr-[40px] mb-4 rounded-bl-[100px] ${1<4?param.img:''} `}></div>
+        <div className={`h-[300px] w-[350px] bg-indigo-100 ml-4 mr-[40px] mb-4 rounded-bl-[100px] ${param.img} `}></div>
         <div className="flex-col justify-center my-auto text-pretty w-[600px] text-[18px] text-gray-600">
           <span className="text-[#02A7F0] font-bold p-1 flex text-[26px]">{param.title}</span>
           {param.msg}
@@ -185,7 +185,7 @@ import { useState, useEffect, useRef } from "react";
             <span className="text-[#02A7F0] font-bold p-1 flex text-[26px]">{param.title}</span>
             {param.msg}
         </div>
-        <div className={`h-[300px] w-[350px] bg-indigo-100 ml-4 mr-[40px] mb-4 rounded-br-[100px] ${1<4?param.img:''}`}></div>
+        <div className={`h-[300px] w-[350px] bg-indigo-100 ml-4 mr-[40px] mb-4 rounded-br-[100px] ${param.img}`}></div>
       </div>
     )
   }
@@ -207,12 +207,12 @@ import { useState, useEffect, useRef } from "react";
 
 const Display=({param})=>{
   return(
-    <div className={`flex gap-[60px] p-[20px] h-fit justify-center ${'w'+(0.96*window.innerWidth)}`}>
+    <div className={`flex gap-[60px] p-[20px] h-fit justify-center ${'w'+(containerWidth)}`}>
       <div className="flex-col justify-center my-auto text-pretty w-[600px] text-[18px] text-gray-600">
           <span className="text-[#02A7F0] font-bold p-1 flex text-[26px] justify-center">{param.title}</span>
             <div className="text-center">{param.msg}</div> 
         </div>
-      <img src={param.img} alt="" className="h-[400px] w-[550px]"/>
+      <img src={param.img} alt="carousel" loading="lazy" className="h-[400px] w-[550px]"/>
     </div>
   )
 }
@@ -226,17 +226,17 @@ const WhyUs=()=>{
       </div>
       <div className="flex gap-8">
         <div className="mt-[30px]">
-          <span className="block mb-[15px] flex justify-center"><img className="h-[70px] w-[70px]" src="familycare.png" alt="care"/></span>
+          <span className="block mb-[15px] flex justify-center"><img className="h-[70px] w-[70px]" loading="lazy" src="familycare.png" alt="care"/></span>
           <span className="block flex justify-center font-bold">Family-Owned Excellency</span>
           <span className="block flex text-center">Trust in a tradition of warmth and expertise, delivered with a personal touch.</span>
         </div>
         <div className="-mt-[10px]">
-          <span className="block mb-[15px] flex justify-center"><img className="h-[60px] w-[60px]" src="affordable.png" alt="best"/></span>
+          <span className="block mb-[15px] flex justify-center"><img className="h-[60px] w-[60px]" loading="lazy" src="affordable.png" alt="best"/></span>
           <span className="block flex justify-center font-bold">Best Price Assurance</span>
           <span className="block text-center">Guaranteeing the lowest prices - we beat or match any competitor</span>
         </div>
         <div className="mt-[30px]">
-          <span className="block mb-[15px] flex justify-center"><img className="h-[60px] w-[60px]" src="toprated.png" alt="best"/></span>
+          <span className="block mb-[15px] flex justify-center"><img className="h-[60px] w-[60px]" loading="lazy" src="toprated.png" alt="best"/></span>
           <span className="block flex justify-center font-bold">Top-Rated Expertise</span>
           <span className="block text-center">Highly reviewed, trained, and certified professionals ensuring quality service. </span>
         </div>
@@ -250,9 +250,9 @@ const Partners=()=>{
     <div className="h-[300px] w-full bg-gray-200 p-5">
       <span className="block flex text-[22px] font-semibold text-[#228B22]">OUR PARTNERS</span>
       <div className="flex gap-4">
-        <img src="sha.jpg" alt="sha" className="h-[70px] w-[270px] rounded-md mr-4 mt-9"/>
-        <img src="tuishi.jpg" alt="sha" className="h-[150px] w-[150px] rounded-full"/>
-        <img src="afya.jpg" alt="sha" className="h-[70px] w-[200px] rounded-md ml-4 mt-9"/>
+        <img src="sha.jpg" loading="lazy" alt="sha" className="h-[70px] w-[270px] rounded-md mr-4 mt-9"/>
+        <img src="tuishi.jpg" loading="lazy" alt="sha" className="h-[150px] w-[150px] rounded-full"/>
+        <img src="afya.jpg" loading="lazy" alt="sha" className="h-[70px] w-[200px] rounded-md ml-4 mt-9"/>
       </div>
     </div>
   )
