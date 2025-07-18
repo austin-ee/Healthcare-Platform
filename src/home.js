@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
       //landing page
   export const Title=()=>{
       return(
@@ -49,20 +49,30 @@ import { useState, useEffect } from "react";
    </div>)
   }
   export const LandingPagee=()=>{
-    const totalSlides=info.length-1
-    const [currentSlide,setCurrentSlide]=useState(0)
-
+    const totalSlides=info.length
+    const [currentSlide,setCurrentSlide]=useState(0);
+    const [containerWidth,setContainerWidth]=useState(0);
+    const containerRef=useRef(null);
     useEffect(()=>{
          const interval=setInterval(()=>{setCurrentSlide(prev=>((prev+1)%totalSlides))},
          4000)
          return ()=>{clearInterval(interval);}
      },[totalSlides]
     )
-
-     function prevSlide(){
+    useEffect(()=>{
+      const updateWidth=()=>{
+        if(containerRef.current){
+          setContainerWidth(containerRef.current.offsetWidth);
+        }
+      };
+      updateWidth();
+      window.addEventListener('resize',updateWidth);
+      return ()=>window.removeEventListener('resize',updateWidth);
+    },[])
+    function prevSlide(){
         setCurrentSlide(prev=>((prev-1+totalSlides)%totalSlides))
      }
-     function nextSlide(){
+    function nextSlide(){
       setCurrentSlide(prev=>((prev+1)%totalSlides))
      }
     return(
@@ -75,7 +85,7 @@ import { useState, useEffect } from "react";
                  Welcome to West Hills
                </span>
           </div>
-          <div className={`relative overflow-hidden shadow-lg px-[10px] h-[430px] mt-[5px] bg-[#ffffff] ${'w-'+(window.innerWidth)}`}>
+          <div className={`relative overflow-hidden shadow-lg px-[10px] h-[430px] mt-[5px] bg-[#ffffff]`} ref={containerRef}>
            <div style={{
               display:"flex",
               gap:'4',
@@ -85,6 +95,7 @@ import { useState, useEffect } from "react";
               <Display param={info[0]}/>
               <Display param={info[1]}/>
               <Display param={info[2]}/>
+              <Display param={info[3]}/>
             </div>
             <button className="absolute bottom-[210] font-bold text-[40px]" onClick={prevSlide}>{'<'}</button>
             <button className="absolute bottom-[210] left-[98%] font-bold text-[40px]" onClick={nextSlide}>{'>'}</button>
@@ -277,7 +288,6 @@ const info=[{title:'Our Commitment to Care',img:'commitment.jpg',msg:'In our hos
     ' community. Our outreach programs aim to promote health awareness and provide essential services to those in need, fostering a healthier environment for all.'},
   {title:'Advanced Medical Technology',img:'surgical.jpg',msg:'We utilize the latest medical technologies and innovations to'+
     ' provide the highest standards of healthcare. Our cutting-edge facilities are equipped to handle a wide range of medical challenges with precision and efficiency.'},
-    {title:'Our Commitment to Care',img:'commitment.jpg',msg:'In our hospital, patient-centered care is at'+
-      ' the forefront of our mission. Our committed team works diligently to provide each patient with'+
-      ' customized attention and thorough treatment that addresses their specific requirements.'}
-    ]
+   {title:'Community Engagement',img:'community.jpg',msg:'We believe in building strong relationships with our'+
+    ' community. Our outreach programs aim to promote health awareness and provide essential services to those in need, fostering a healthier environment for all.'}
+  ]
