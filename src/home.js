@@ -97,8 +97,10 @@ import { useState, useEffect, useRef } from "react";
               <Display param={info[2]}/>
               <Display param={info[3]}/>
             </div>
-            <button className="absolute bottom-[210] font-bold text-[40px]" onClick={prevSlide}>{'<'}</button>
-            <button className="absolute bottom-[210] left-[98%] font-bold text-[40px]" onClick={nextSlide}>{'>'}</button>
+            <div className="flex justify-between font-bold text-[40px] absolute">
+              <button disabled={currentSlide===0} onClick={prevSlide}>{'<'}</button>
+              <button disabled={currentSlide===totalSlides-1} onClick={nextSlide}>{'>'}</button>
+            </div>
           </div>
            {/**Services */}
         <div className="bg-white w-full h-fit mt-1 py-4 sm:p-4">
