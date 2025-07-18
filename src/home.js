@@ -92,10 +92,10 @@ import { useState, useEffect, useRef } from "react";
               width:`${totalSlides*containerWidth}px`,
               transform:`translateX(-${currentSlide*containerWidth}px)`,
               transition:"transform 0.8s ease"}}>
-              <Display param={info[0]}/>
-              <Display param={info[1]}/>
-              <Display param={info[2]}/>
-              <Display param={info[3]}/>
+              <Display param={info[0]} contWidth={containerWidth}/>
+              <Display param={info[1]} contWidth={containerWidth}/>
+              <Display param={info[2]} contWidth={containerWidth}/>
+              <Display param={info[3]} contWidth={containerWidth}/>
             </div>
             <div className="flex justify-between font-bold text-[40px] absolute bottom-[48%]">
               <button disabled={currentSlide===0} onClick={prevSlide}>{'<'}</button>
@@ -205,9 +205,9 @@ import { useState, useEffect, useRef } from "react";
     );
 }
 
-const Display=({param})=>{
+const Display=({param,contWidth})=>{
   return(
-    <div className={`flex gap-[60px] p-[20px] h-fit justify-center ${'w'+(containerWidth)}`}>
+    <div className={`flex gap-[60px] p-[20px] h-fit justify-center ${'w'+(contWidth)}`}>
       <div className="flex-col justify-center my-auto text-pretty w-[600px] text-[18px] text-gray-600">
           <span className="text-[#02A7F0] font-bold p-1 flex text-[26px] justify-center">{param.title}</span>
             <div className="text-center">{param.msg}</div> 
