@@ -89,8 +89,8 @@ import { useState, useEffect, useRef } from "react";
            <div style={{
               display:"flex",
               gap:'4',
-              width:`${totalSlides*window.innerWidth}px`,
-              transform:`translateX(-${currentSlide*0.98*window.innerWidth}px)`,
+              width:`${totalSlides*containerWidth}px`,
+              transform:`translateX(-${currentSlide*0.98*containerWidth}px)`,
               transition:"transform 0.8s ease"}}>
               <Display param={info[0]}/>
               <Display param={info[1]}/>
