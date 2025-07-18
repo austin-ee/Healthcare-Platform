@@ -97,7 +97,7 @@ import { useState, useEffect, useRef } from "react";
               <Display param={info[2]}/>
               <Display param={info[3]}/>
             </div>
-            <div className="flex justify-between font-bold text-[40px] absolute">
+            <div className="flex justify-between font-bold text-[40px] absolute bottom-[48%]">
               <button disabled={currentSlide===0} onClick={prevSlide}>{'<'}</button>
               <button disabled={currentSlide===totalSlides-1} onClick={nextSlide}>{'>'}</button>
             </div>
