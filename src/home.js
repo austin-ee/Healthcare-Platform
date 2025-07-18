@@ -85,7 +85,7 @@ import { useState, useEffect, useRef } from "react";
                  Welcome to West Hills
                </span>
           </div>
-          <div className={`relative overflow-hidden shadow-lg px-[10px] h-[430px] mt-[5px] bg-[#ffffff]`} ref={containerRef}>
+          <div className={`relative overflow-hidden shadow-lg px-[10px] h-[430px] bg-[#ffffff]`} ref={containerRef}>
            <div style={{
               display:"flex",
               gap:'4',
